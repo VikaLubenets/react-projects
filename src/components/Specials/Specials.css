@@ -1,0 +1,32 @@
+.specials-container{
+  max-width: 90vw;
+}
+
+.header-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cards-container{
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.specials-btn{
+  border-radius: 20px;
+  border: 1px solid #495E57;
+  background: rgba(121, 121, 121, 0.00);
+  display: inline-flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.specials-btn:hover{
+  border: 1px solid #FF0009;
+  color: '#FF0009';
+  cursor: pointer;
+}

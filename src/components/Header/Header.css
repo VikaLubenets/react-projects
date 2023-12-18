@@ -1,13 +1,14 @@
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 30px 60px;
   border-radius: 5px;
-  border: 2px solid #495E57;
-  background: #FFFDFD;
+  border: 2px solid #495e57;
+  background: #fffdfd;
+  width: 90vw;
 }
 
-.logo-img{
+.logo-img {
   margin: 18px 32px;
 }

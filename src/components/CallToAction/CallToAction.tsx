@@ -1,5 +1,6 @@
 import { PropsBanner } from './types';
 import './CallToAction.css';
+import { Link } from 'react-router-dom';
 
 export default function CallToAction({
   header,
@@ -10,7 +11,9 @@ export default function CallToAction({
     <article className="banner-block">
       <h2 className="banner-title">{header}</h2>
       {Boolean(subtitle) && <h3 className="banner-subtitle">{subtitle}</h3>}
-      <a className="banner-button">{buttonName || 'Reserve'}</a>
+      <Link to={'/booking'} className="banner-button">
+        {buttonName || 'Reserve'}
+      </Link>
     </article>
   );
 }

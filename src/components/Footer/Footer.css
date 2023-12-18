@@ -1,13 +1,14 @@
-.footer{
+.footer {
   display: flex;
   align-items: center;
   gap: 190px;
   padding: 85px;
   flex-wrap: wrap;
+  width: 90vw;
 }
 
-.footer-title{
-  color: #495E57;
+.footer-title {
+  color: #495e57;
   font-family: Montserrat;
   font-size: 35px;
   font-style: normal;
@@ -19,8 +20,8 @@
 .footer-block {
   display: flex;
   flex-direction: column;
-  gap: 35px;
-  width: 300px;
+  gap: 15px;
+  max-width: 400px;
 }
 
 .footer-line {
@@ -32,13 +33,13 @@
 .footer-icon {
   width: 42px;
   height: 32px;
-  color: #495E57;
+  color: #495e57;
 }
 
 .location-icon {
   width: 22px;
   height: 32px;
-  color: #495E57;
+  color: #495e57;
 }
 
 .footer-text {
@@ -48,5 +49,5 @@
   font-size: 20px;
   line-height: 23px;
   letter-spacing: 0.06em;
-  color: #495E57;
+  color: #495e57;
 }

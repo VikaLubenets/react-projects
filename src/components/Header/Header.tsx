@@ -9,12 +9,11 @@ export default function Header() {
       <NavBar
         logoSrc={logo}
         navs={[
-          { link: './', title: 'Home' },
+          { link: '/', title: 'Home' },
           { link: './', title: 'About' },
           { link: './', title: 'Menu' },
           { link: './', title: 'Reservations' },
           { link: './', title: 'Order online' },
-          { link: './', title: 'Login' },
         ]}
       />
     </header>

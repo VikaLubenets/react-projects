@@ -1,6 +1,7 @@
 import { PropsNavigation } from './types';
 import React from 'react';
 import './NavBar.css';
+import { Link } from 'react-router-dom';
 
 interface NavBarProps extends PropsNavigation {
   logoSrc: string;
@@ -20,9 +21,13 @@ export default function NavBar({ logoSrc, navs }: NavBarProps): JSX.Element {
       <nav>
         <ul className="nav-container">
           {navs.map((nav, index) => (
-            <li key={`${nav.link}+${index}`} className="nav-link">
-              <a href={nav.link}>{nav.title}</a>
-            </li>
+            <Link
+              to={nav.link}
+              key={`${nav.link}+${index}`}
+              className="nav-link"
+            >
+              {nav.title}
+            </Link>
           ))}
         </ul>
       </nav>

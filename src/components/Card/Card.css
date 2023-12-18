@@ -1,0 +1,76 @@
+.card{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 20px;
+  border: 1px solid #495E57;
+  background: #FFF;
+  max-width: 27vw;
+  transition: transform ease 0.8s;
+}
+
+.card:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.card-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.card-title{
+  color: #495E57;
+  font-family: Montserrat;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.card-price{
+  color: #FF0009;
+  font-family: Montserrat;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.card-description{
+  color: #495E57;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.card-btn{
+  border-radius: 20px;
+  border: 1px solid #495E57;
+  background: rgba(121, 121, 121, 0.00);
+  color: #495E57;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 50%;
+  height: 30px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-btn:hover{
+  color: #FF0009;
+  border: 1px solid #FF0009;
+  cursor: pointer;
+}

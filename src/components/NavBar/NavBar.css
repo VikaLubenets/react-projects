@@ -1,4 +1,4 @@
-.nav-container{
+.nav-container {
   margin-right: 32px;
   display: flex;
   justify-content: center;
@@ -14,12 +14,13 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  text-decoration: none;
 }
 
-.nav-link:hover{
-  color: #495E57;
+.nav-link:hover {
+  color: #495e57;
 }
 
-.nav-link:active{
-  color: #F4CE14;
+.nav-link:active {
+  color: #f4ce14;
 }
