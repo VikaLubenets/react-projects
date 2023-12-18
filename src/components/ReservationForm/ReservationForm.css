@@ -1,0 +1,77 @@
+.regform-section{
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form{
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-banner{
+  width: 100%;
+}
+
+.form-label{
+  color: #000;
+  font-family: Karla;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.regform-section input,
+.regform-section select,
+.regform-section textarea {
+  border: 1px solid rgb(125, 125, 125);
+  background: #F5F5F5;
+  border-radius: 10px;
+}
+
+.form-line{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-btns{
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.button{
+  color: #FFF;
+  text-align: center;
+  font-family: Karla;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 15px;
+  width: 180px;
+  height: 60px;
+  transition: all ease 0.5s;
+}
+
+.reserve-btn{
+background-color: #f4ce14;
+color: black;
+}
+
+.cancel-btn{
+  background: #495E57;
+  color: #FFF;
+}
+
+.button:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
