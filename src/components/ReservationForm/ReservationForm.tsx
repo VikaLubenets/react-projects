@@ -1,18 +1,24 @@
-import React, { ChangeEvent, useState } from 'react';
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import './ReservationForm.css';
+import { ReservationFormProps } from './types';
 
-export default function ReservationForm() {
-  const [formData, setFormData] = useState({
-    address: '',
-    date: '',
-    time: '',
-    numberOfGuests: '',
-    name: '',
-    email: '',
-    phoneNumber: '',
-    specialInstruction: '',
-    checkboxApproval: '',
-  });
+export default function ReservationForm({
+  data,
+  handler,
+  availableTimes,
+  dispatchTimes,
+}: ReservationFormProps) {
+  const {
+    address,
+    date,
+    time,
+    numberOfGuests,
+    name,
+    email,
+    phoneNumber,
+    specialInstruction,
+    checkboxApproval,
+  } = data;
 
   const handleReserve = () => {
     console.log('Table reserved!');
@@ -20,13 +26,6 @@ export default function ReservationForm() {
 
   const handleCancel = () => {
     console.log('Reservation canceled!');
-  };
-
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
   return (
@@ -41,11 +40,11 @@ export default function ReservationForm() {
           <select
             id="address"
             name="address"
-            value={formData.address}
-            onChange={handleChange}
+            value={address}
+            onChange={handler}
           >
             <option value="" disabled>
-              -- Select an address --
+              Select an address
             </option>
             <option value="address1">Main Avenue 7</option>
             <option value="address2">Road Street 19</option>
@@ -60,21 +59,24 @@ export default function ReservationForm() {
             type="date"
             id="date"
             name="date"
-            value={formData.date}
-            onChange={handleChange}
+            value={date}
+            onChange={handler}
           />
         </div>
         <div className="form-line">
           <label htmlFor="time" className="form-label">
             Select Time:
           </label>
-          <input
-            type="time"
-            id="time"
-            name="time"
-            value={formData.time}
-            onChange={handleChange}
-          />
+          <select id="time" name="time" value={time} onChange={handler}>
+            <option value="" disabled>
+              Select available time slot
+            </option>
+            {availableTimes.map((bookingTime) => (
+              <option key={bookingTime.id} value={bookingTime.id}>
+                {bookingTime.time}
+              </option>
+            ))}
+          </select>
         </div>
         <div className="form-line">
           <label htmlFor="numberOfGuests" className="form-label">
@@ -84,8 +86,8 @@ export default function ReservationForm() {
             type="number"
             id="numberOfGuests"
             name="numberOfGuests"
-            value={formData.numberOfGuests}
-            onChange={handleChange}
+            value={numberOfGuests}
+            onChange={handler}
           />
         </div>
         <div className="form-line">
@@ -96,8 +98,8 @@ export default function ReservationForm() {
             type="text"
             id="name"
             name="name"
-            value={formData.name}
-            onChange={handleChange}
+            value={name}
+            onChange={handler}
           />
         </div>
         <div className="form-line">
@@ -108,8 +110,8 @@ export default function ReservationForm() {
             type="email"
             id="email"
             name="email"
-            value={formData.email}
-            onChange={handleChange}
+            value={email}
+            onChange={handler}
           />
         </div>
         <div className="form-line">
@@ -120,8 +122,8 @@ export default function ReservationForm() {
             type="tel"
             id="phoneNumber"
             name="phoneNumber"
-            value={formData.phoneNumber}
-            onChange={handleChange}
+            value={phoneNumber}
+            onChange={handler}
           />
         </div>
         <div className="form-line">
@@ -131,8 +133,8 @@ export default function ReservationForm() {
           <textarea
             id="specialInstruction"
             name="specialInstruction"
-            value={formData.specialInstruction}
-            onChange={handleChange}
+            value={specialInstruction}
+            onChange={handler}
           />
         </div>
         <div className="form-line">
@@ -143,8 +145,8 @@ export default function ReservationForm() {
             type={'checkbox'}
             id="checkboxApproval"
             name="checkboxApproval"
-            value={formData.checkboxApproval}
-            onChange={handleChange}
+            value={checkboxApproval}
+            onChange={handler}
           />
         </div>
         <div className="form-btns">
