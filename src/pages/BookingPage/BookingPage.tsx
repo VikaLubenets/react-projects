@@ -1,4 +1,5 @@
 import React, { ChangeEvent, useReducer, useState } from 'react';
+import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 import ReservationForm from '../../components/ReservationForm/ReservationForm';
 import { initialTimesState, timesReducer } from './reducer';
@@ -39,6 +40,7 @@ export default function BookingPage() {
           dispatchTimes={dispatchTimes}
         />
       </main>
+      <Footer />
     </React.Fragment>
   );
 }

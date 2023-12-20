@@ -76,14 +76,7 @@
   cursor: pointer;
 }
 
-.error-validation{
+.error-validation {
   font-size: 20px;
-  color:red;
-}
-
-.success-notification{
-  font-size: 30px;
-  text-align: center;
-  color: green;
-  margin: 15px;
+  color: red;
 }
