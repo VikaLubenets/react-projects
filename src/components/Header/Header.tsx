@@ -10,10 +10,10 @@ export default function Header() {
         logoSrc={logo}
         navs={[
           { link: '/', title: 'Home' },
-          { link: './', title: 'About' },
-          { link: './', title: 'Menu' },
-          { link: './', title: 'Reservations' },
-          { link: './', title: 'Order online' },
+          { link: '/underconstruction', title: 'About' },
+          { link: '/underconstruction', title: 'Menu' },
+          { link: '/booking', title: 'Reservations' },
+          { link: '/underconstruction', title: 'Order online' },
         ]}
       />
     </header>
