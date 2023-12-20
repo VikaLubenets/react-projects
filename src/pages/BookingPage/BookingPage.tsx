@@ -13,7 +13,7 @@ export default function BookingPage() {
     email: '',
     phoneNumber: '',
     specialInstruction: '',
-    checkboxApproval: '',
+    checkboxApproval: false,
   });
 
   const [availableTimes, dispatchTimes] = useReducer(

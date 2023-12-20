@@ -9,7 +9,7 @@ export interface FormData {
   email: string;
   phoneNumber: string;
   specialInstruction: string;
-  checkboxApproval: string;
+  checkboxApproval: boolean;
 }
 
 export interface ReservationFormProps {
