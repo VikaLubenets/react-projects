@@ -5,7 +5,7 @@
   border-radius: 20px;
   border: 1px solid #495e57;
   background: #fff;
-  max-width: 27vw;
+  max-width: 31%;
   transition: transform ease 0.8s;
 }
 
@@ -76,32 +76,42 @@
 }
 
 @media (max-width: 900px) {
-  .card-btn, 
-  .card-description  {
+  .card-btn,
+  .card-description {
     font-size: 14px;
+    text-align: center;
   }
 
-  .card-price, 
-  .card-title{
+  .card{
+    max-width: 29%;
+  }
+
+  .card-price,
+  .card-title {
     font-size: 20px;
   }
 }
 
 @media (max-width: 700px) {
-  .card-btn, 
-  .card-description  {
-    font-size: 12px;
+  .card-btn,
+  .card-description {
+    font-size: 11px;
+    text-align: center;
   }
 
-  .card-price, 
-  .card-title{
+  .card{
+    max-width: 24%;
+  }
+
+  .card-price,
+  .card-title {
     font-size: 16px;
   }
 }
 
 @media (max-width: 600px) {
   .card {
-    max-width: 80vw;
+    max-width: 80%;
   }
 
   .card:hover {
@@ -109,13 +119,13 @@
     cursor: pointer;
   }
 
-  .card-btn, 
-  .card-description  {
+  .card-btn,
+  .card-description {
     font-size: 14px;
   }
 
-  .card-price, 
-  .card-title{
+  .card-price,
+  .card-title {
     font-size: 20px;
   }
 }

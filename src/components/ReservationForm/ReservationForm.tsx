@@ -69,7 +69,7 @@ export default function ReservationForm({
 
   return (
     <article className="regform-section">
-      <h2 className="section-title">Reservation Form</h2>
+      <h2 className="section-title form-title">Reservation Form</h2>
       <p className="text">To book a table please fill out the form</p>
       <form className="form" onSubmit={handleReserve}>
         <div className="form-line">

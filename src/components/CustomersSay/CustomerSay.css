@@ -1,5 +1,5 @@
 .review-section {
-  width: 90vw;
+  width: 95%;
   margin-left: 30px;
 }
 
@@ -10,7 +10,13 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin: 60px;
+  padding: 60px;
+  box-sizing: border-box;
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.review-title{
+  margin-bottom: 0px;
 }

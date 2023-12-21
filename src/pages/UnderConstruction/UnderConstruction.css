@@ -1,4 +1,11 @@
 .under-construction {
   color: red;
   font-size: 30px;
+  height: 45vh;
+}
+
+@media (max-width: 600px) {
+  .under-construction {
+    height: 75vh;
+  }
 }

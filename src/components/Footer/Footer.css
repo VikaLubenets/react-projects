@@ -1,67 +1,38 @@
 .footer {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 90px;
-  padding: 30px 60px;
-  flex-wrap: wrap;
+  margin: 30px 60px;
+  border-radius: 5px;
+  border: 2px solid #495e57;
+  background: #fffdfd;
   width: 90vw;
+  height: 10vh;
+  margin-top: 100px;
 }
 
-.footer-title {
+.footer-container {
   color: #495e57;
   font-family: Montserrat;
-  font-size: 35px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 400;
 }
 
-.footer-block {
-  display: flex;
-  flex-direction: column;
-  min-width: 250px;
-  max-width: 300px;
-}
-
-.footer-line {
-  display: flex;
-  gap: 20px;
-  justify-content: flex-start;
-}
-
-.footer-icon {
-  width: 42px;
-  height: 32px;
-  color: #495e57;
-}
-
-.location-icon {
-  width: 22px;
-  height: 32px;
-  color: #495e57;
-}
-
-.footer-text {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 23px;
-  letter-spacing: 0.06em;
-  color: #495e57;
-}
-
-
-
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .footer {
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    width: 80vw;
   }
 }
 
 @media (max-width: 600px) {
   .footer {
-    background-color: #c1cac7;
+    margin: 0px 0px;
+    margin-top: 30px;
+    width: 90vw;
+  }
+
+  .footer-container {
+    font-size: 15px;
   }
 }

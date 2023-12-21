@@ -28,8 +28,9 @@ const timesReducer = (
   switch (action.type) {
     case 'INITIALIZE_TIMES': {
       const currentDate = new Date();
-      const formattedDate = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1
-        }-${currentDate.getDate()}`;
+      const formattedDate = `${currentDate.getFullYear()}-${
+        currentDate.getMonth() + 1
+      }-${currentDate.getDate()}`;
 
       const availableTimes = fetchAPI(new Date(formattedDate));
 
