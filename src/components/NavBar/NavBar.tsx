@@ -1,7 +1,7 @@
 import { PropsNavigation } from './types';
-import React from 'react';
-import './NavBar.css';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './NavBar.css';
 
 interface NavBarProps extends PropsNavigation {
   logoSrc: string;
@@ -9,6 +9,12 @@ interface NavBarProps extends PropsNavigation {
 }
 
 export default function NavBar({ logoSrc, navs }: NavBarProps): JSX.Element {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleToggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
   return (
     <React.Fragment>
       <img
@@ -19,7 +25,7 @@ export default function NavBar({ logoSrc, navs }: NavBarProps): JSX.Element {
         className="logo-img"
       />
       <nav>
-        <ul className="nav-container">
+        <ul className={`nav-container ${isMenuOpen ? 'menu-open' : ''}`}>
           {navs.map((nav, index) => (
             <Link
               to={nav.link}
@@ -30,6 +36,14 @@ export default function NavBar({ logoSrc, navs }: NavBarProps): JSX.Element {
             </Link>
           ))}
         </ul>
+        <div
+          className={`burger-btn ${isMenuOpen ? 'show' : ''}`}
+          onClick={handleToggleMenu}
+        >
+          <span className="span"></span>
+          <span className="span"></span>
+          <span className="span"></span>
+        </div>
       </nav>
     </React.Fragment>
   );

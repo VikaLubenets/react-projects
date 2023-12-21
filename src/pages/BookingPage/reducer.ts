@@ -1,4 +1,4 @@
-import { fetchAPI } from './fakeAPI';
+import { fetchAPI } from '../../utils/fakeAPI';
 
 const initialTimesState = [
   { id: 'time1', time: '14:00' },
@@ -28,9 +28,8 @@ const timesReducer = (
   switch (action.type) {
     case 'INITIALIZE_TIMES': {
       const currentDate = new Date();
-      const formattedDate = `${currentDate.getFullYear()}-${
-        currentDate.getMonth() + 1
-      }-${currentDate.getDate()}`;
+      const formattedDate = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1
+        }-${currentDate.getDate()}`;
 
       const availableTimes = fetchAPI(new Date(formattedDate));
 

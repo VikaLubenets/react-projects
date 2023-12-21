@@ -24,3 +24,99 @@
 .nav-link:active {
   color: #f4ce14;
 }
+
+.burger-btn {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 30px;
+  right: 15px;
+  z-index: 2;
+  overflow: hidden;
+  display: none;
+  transition: background-color 0.5s;
+}
+
+.burger-btn:hover {
+  cursor: pointer;
+}
+
+.burger-btn span {
+  position: absolute;
+	top: 50%;
+	right: 10px;
+	width: 40px;
+	height: 1px;
+	background-color: black;
+	transition: all 0.5s;
+}
+
+.burger-btn span:nth-of-type(2) {
+	top: calc(50% - 5px);
+}
+
+.burger-btn span:nth-of-type(3) {
+	top: calc(50% + 5px);
+}
+
+.burger-btn.show span:nth-of-type(1) {
+  display: none;
+}
+
+.burger-btn.show span:nth-of-type(1) {
+  display: block;
+  width: 20px;
+  top: calc(50% - 1px);
+  background-color: black;
+  transform: rotate(45deg);
+}
+
+.burger-btn.show span:nth-of-type(2) {
+  width: 0;
+}
+
+.burger-btn.show span:nth-of-type(3) {
+  width: 20px;
+  top: calc(50% - 1px);
+  background-color: black;
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 1185px) {
+  .nav-container {
+    margin-right: 22px;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .nav-container {
+    margin-right: 12px;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-container {
+    display: none;
+  }
+
+  .nav-container.menu-open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 45px;
+    z-index: 1001;
+    right: 0;
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    transition: all ease 0.5s;
+  }
+
+  .burger-btn {
+    display: block;
+    z-index: 1001;
+    cursor: pointer;
+  }
+}

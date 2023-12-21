@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import type { FormData } from '../../components/ReservationForm/types';
+import type { FormData } from '../components/ReservationForm/types';
 
 const seededRandom = (seed: number): (() => number) => {
   const m = 2 ** 35 - 31;

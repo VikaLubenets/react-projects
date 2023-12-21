@@ -61,8 +61,8 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  width: 50%;
-  height: 30px;
+  width: 60%;
+  height: 40px;
   margin: 20px;
   display: flex;
   justify-content: center;
@@ -73,4 +73,49 @@
   color: #ff0009;
   border: 1px solid #ff0009;
   cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .card-btn, 
+  .card-description  {
+    font-size: 14px;
+  }
+
+  .card-price, 
+  .card-title{
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .card-btn, 
+  .card-description  {
+    font-size: 12px;
+  }
+
+  .card-price, 
+  .card-title{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    max-width: 80vw;
+  }
+
+  .card:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+
+  .card-btn, 
+  .card-description  {
+    font-size: 14px;
+  }
+
+  .card-price, 
+  .card-title{
+    font-size: 20px;
+  }
 }

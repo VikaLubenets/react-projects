@@ -1,10 +1,10 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ReservationForm from './ReservationForm';
 import { BrowserRouter } from 'react-router-dom';
 
-test('Renders the ReservationForm heading and handles input changes', () => {
+test('Renders the ReservationForm heading and handles input changes', async () => {
   const mockHandler = jest.fn();
 
   render(
@@ -37,4 +37,12 @@ test('Renders the ReservationForm heading and handles input changes', () => {
 
   const addressInput = screen.getByLabelText('Select Address:');
   fireEvent.change(addressInput, { target: { value: 'address1' } });
+
+  fireEvent.click(screen.getByTitle('Reserve a Table'));
+
+  await waitFor(() => {
+    expect(
+      screen.getByText('Please fill in all required fields.')
+    ).toBeInTheDocument();
+  });
 });

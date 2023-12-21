@@ -12,3 +12,12 @@
 .logo-img {
   margin: 18px 32px;
 }
+
+@media (max-width: 600px) {
+  .header {
+    position: fixed;
+    z-index: 5;
+    margin: 0px 20px;
+    top: 0;
+  }
+}

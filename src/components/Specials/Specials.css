@@ -26,7 +26,21 @@
 }
 
 .specials-btn:hover {
-  border: 1px solid #ff0009;
-  color: '#FF0009';
+  background: #d9b608f9;
+  color: white;
   cursor: pointer;
+}
+
+.specials-btn:active {
+  background: #495e57;
+  color: #f4ce14;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
 }

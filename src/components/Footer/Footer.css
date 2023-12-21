@@ -1,8 +1,8 @@
 .footer {
   display: flex;
   align-items: center;
-  gap: 190px;
-  padding: 85px;
+  gap: 90px;
+  padding: 30px 60px;
   flex-wrap: wrap;
   width: 90vw;
 }
@@ -13,14 +13,13 @@
   font-size: 35px;
   font-style: normal;
   font-weight: 400;
-  line-height: 130%;
-  letter-spacing: 2.1px;
 }
 
 .footer-block {
   display: flex;
   flex-direction: column;
-  max-width: 400px;
+  min-width: 250px;
+  max-width: 300px;
 }
 
 .footer-line {
@@ -49,4 +48,20 @@
   line-height: 23px;
   letter-spacing: 0.06em;
   color: #495e57;
+}
+
+
+
+@media (max-width: 800px) {
+  .footer {
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    background-color: #c1cac7;
+  }
 }

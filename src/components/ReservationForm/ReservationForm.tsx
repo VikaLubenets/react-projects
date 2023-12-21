@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { submitAPI } from '../../pages/BookingPage/fakeAPI';
+import { submitAPI } from '../../utils/fakeAPI';
 import './ReservationForm.css';
 import { ReservationFormProps } from './types';
 import { useNavigate } from 'react-router-dom';
@@ -126,7 +126,7 @@ export default function ReservationForm({
             type="number"
             id="numberOfGuests"
             name="numberOfGuests"
-            value={numberOfGuests}
+            value={`${Number(numberOfGuests) > 1 ? numberOfGuests : 1}`}
             onChange={handler}
           />
         </div>

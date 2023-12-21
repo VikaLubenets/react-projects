@@ -10,5 +10,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-bottom: 60px;
+  margin: 60px;
+  justify-content: center;
+  align-items: center;
 }
