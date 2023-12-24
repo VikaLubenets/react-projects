@@ -1,0 +1,133 @@
+.banner-block {
+  background-image: url('../../assets/banner.png');
+  width: 95%;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 30px;
+}
+
+.banner-title {
+  color: #495e57;
+  font-family: Montserrat;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.banner-subtitle {
+  color: #495e57;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.banner-button {
+  width: 200px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #f4ce14;
+  color: #495e57;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.banner-button:hover {
+  background: #d9b608f9;
+  cursor: pointer;
+}
+
+.banner-button:active {
+  background: #495e57;
+  color: #f4ce14;
+  cursor: pointer;
+}
+
+@media (max-width: 1199px) {
+  .banner-block {
+    background-size: contain;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .banner-block {
+    background-size: contain;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .banner-block {
+    background-size: cover;
+  }
+  .banner-title {
+    font-size: 28px;
+  }
+
+  .banner-subtitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .banner-block {
+    width: 90%;
+    gap: 10px;
+    background-size: cover;
+  }
+  .banner-title {
+    font-size: 18px;
+  }
+
+  .banner-subtitle {
+    font-size: 14px;
+  }
+
+  .banner-button {
+    width: 100px;
+    height: 45px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner-block {
+    margin-top: 100px;
+    background: linear-gradient(
+        rgba(128, 128, 128, 0.8),
+        rgba(128, 128, 128, 0.5)
+      ),
+      url('../../assets/banner.png');
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .banner-title {
+    color: #f4ce14;
+  }
+
+  .banner-subtitle {
+    color: #f4ce14;
+  }
+}

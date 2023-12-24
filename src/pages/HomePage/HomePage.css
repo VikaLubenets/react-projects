@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 60px;
+  gap: 90px;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  overflow-x: hidden;
+}
+
+@media (max-width: 900px) {
+  .main {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    width: 90vw;
+    gap: 30px;
+    margin: 0px 0px;
+  }
+}

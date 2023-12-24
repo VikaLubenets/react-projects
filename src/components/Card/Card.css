@@ -1,0 +1,131 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 20px;
+  border: 1px solid #495e57;
+  background: #fff;
+  max-width: 31%;
+  transition: transform ease 0.8s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.card-title {
+  color: #495e57;
+  font-family: Montserrat;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.card-price {
+  color: #ff0009;
+  font-family: Montserrat;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.card-description {
+  color: #495e57;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.card-btn {
+  border-radius: 20px;
+  border: 1px solid #495e57;
+  background: rgba(121, 121, 121, 0);
+  color: #495e57;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 60%;
+  height: 40px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-btn:hover {
+  color: #ff0009;
+  border: 1px solid #ff0009;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .card-btn,
+  .card-description {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .card{
+    max-width: 29%;
+  }
+
+  .card-price,
+  .card-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .card-btn,
+  .card-description {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .card{
+    max-width: 24%;
+  }
+
+  .card-price,
+  .card-title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    max-width: 80%;
+  }
+
+  .card:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+
+  .card-btn,
+  .card-description {
+    font-size: 14px;
+  }
+
+  .card-price,
+  .card-title {
+    font-size: 20px;
+  }
+}
